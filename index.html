@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age $ Distance Converter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="header">
+        <h1>Age & Distance Converter</h1> 
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="converter-section">
+                    <h2>Age Calculator</h2>
+                    <div class="form-group">
+                        <label for="dob"> Date of Birth:</label>
+                        <input type="data" id="dob" class="form-control">
+                    </div>
+                    <button  class="btn btn-primary mt-3" onclick="calculateAge()">Calculator</button>
+                    <div class="result">
+                        <p>Age in Years: <span id="years"></span></p>
+                        <p>Age in months: <span id="months"></span></p>
+                        <p>Age in day: <span id="day"></span></p>
+                        <!-- <p>Age in minutes: <span id="minutes"></span></p> -->
+                        <!-- <p>Age in seconds: <span id="seconds"></span></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="converter-section">
+                    <h2>Distance Converter</h2>
+                    <div class="form-group">
+                        <label for="distance">Distance</label>
+                        <input type="number" id="distance" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="umit"> Unit:</label>
+                        <select id="unit" class="form-control">
+                            <option value="km">Kilometers</option>
+                            <option value="m">Meters</option>
+                            <option value="in">Inches</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary mt-3" onclick="convertDistance()">Convert</button>
+                    <div class="result">
+                        <p>Distance in Kilometers:<span id="km"></span></p>
+                        <p>Distance in meters:<span id="m"></span></p>
+                        <p>Distance in inches:<span id="in"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>@ 2023 Age & Distance Converter. All rights reserved.</p>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
